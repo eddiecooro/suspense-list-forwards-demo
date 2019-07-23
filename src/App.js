@@ -7,10 +7,11 @@ function App() {
     <div className={styles.page}>
       <div className={styles.container}>
         <div>
-          <p>{'With'}</p>
-          <p>{'<SuspenseList revealOrder="backwards"/>'}</p>
+          <p>{'Without'}</p>
+          <p>{'<SuspenseList />'}</p>
+          <p>{'‌'}</p>
           <br />
-          <UserList useSuspenseList={true} revealOrder="backwards" />
+          <UserList />
         </div>
         <div>
           <p>{'With'}</p>
@@ -19,11 +20,10 @@ function App() {
           <UserList useSuspenseList={true} revealOrder="forwards" />
         </div>
         <div>
-          <p>{'Without'}</p>
-          <p>{'<SuspenseList />'}</p>
-          <p>{'‌'}</p>
+          <p>{'With'}</p>
+          <p>{'<SuspenseList revealOrder="backwards"/>'}</p>
           <br />
-          <UserList />
+          <UserList useSuspenseList={true} revealOrder="backwards" />
         </div>
       </div>
     </div>

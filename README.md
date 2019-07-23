@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## DEMO
-visit https://Eddie-CooRo.github.io/suspense-list-together-demo
+visit https://Eddie-CooRo.github.io/suspense-list-forwards-demo
 
 ## Docs
 Read this [dev.to](https://dev.to/eddiecooro/what-react-team-is-working-on-part-one-suspenselist-component-1k9b) article for more details
