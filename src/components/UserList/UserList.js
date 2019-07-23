@@ -16,14 +16,14 @@ const FetchAndShowUser = ({ userId }) => {
         const user = families.find(user => user.id === userId);
         fakeCache[userId] = user;
         resolve(user);
-      }, Math.random() * 2500);
+      }, Math.random() * 5000);
     });
   }
   throw promises[userId];
 };
 
-const UserList = ({ useSuspenseList }) => {
-  const fetchingUsers = families.slice(0, 8).map(user => (
+const UserList = ({ useSuspenseList, revealOrder }) => {
+  const fetchingUsers = families.slice(0, 4).map(user => (
     <React.Suspense
       key={user.id}
       fallback={<div className={styles.card}>Loading...</div>}>
@@ -33,7 +33,7 @@ const UserList = ({ useSuspenseList }) => {
 
   if (useSuspenseList) {
     return (
-      <React.unstable_SuspenseList revealOrder="together">
+      <React.unstable_SuspenseList revealOrder={revealOrder}>
         {fetchingUsers}
       </React.unstable_SuspenseList>
     );
